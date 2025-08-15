@@ -29,7 +29,7 @@ export default function Details({ id }) {
         addToCart={() => dispatch(addToCart(product))}
       />
       <ReviewGrid />
-      <ProductDisplay title="You Might Also Like" category="beauty" />
+      <ProductDisplay title="You Might Also Like" category="womens-dresses" />
     </>
   );
 }

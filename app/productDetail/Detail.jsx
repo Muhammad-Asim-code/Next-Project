@@ -4,6 +4,7 @@ import Image from "next/image";
 import Colors from "./Colors";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../ReduxStore/cartSlice";
+import StarRating from "./StarRating";
 
 function ItemDetail({ product }) {
   const [increment, setIncrement] = useState(1);
@@ -61,7 +62,7 @@ function ItemDetail({ product }) {
               </p>
             )}
           </div>
-
+          <StarRating rating={product.rating} />
           <p className="mt-4 text-gray-600 text-sm md:text-base">
             {product.description}
           </p>

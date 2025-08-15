@@ -1,7 +1,7 @@
 "use client";
-
+import { MdDelete } from "react-icons/md";
 import Image from "next/image";
-
+import StarRating from "../productDetail/StarRating";
 export default function CartItem({ item, onRemove }) {
   return (
     <div className="flex items-center gap-4 border p-4 rounded-lg shadow-sm">
@@ -10,10 +10,11 @@ export default function CartItem({ item, onRemove }) {
         alt={item.title}
         width={100}
         height={100}
-        className="rounded-md object-cover"
+        className="rounded-md object-cover bg-gray-300 p-4"
       />
       <div className="flex-1">
-        <h2 className="font-semibold text-lg">{item.title}</h2>
+        <h2 className="font-semibold">{item.title}</h2>
+        <StarRating rating={item.rating} />
         <p className="text-gray-600">
           ${item.price} × {item.quantity}
         </p>
@@ -23,9 +24,9 @@ export default function CartItem({ item, onRemove }) {
       </div>
       <button
         onClick={onRemove}
-        className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md"
+        className=" cursor-pointer px-3 py-2 rounded-md"
       >
-        Remove
+        <MdDelete fill="red" size={30} />
       </button>
     </div>
   );

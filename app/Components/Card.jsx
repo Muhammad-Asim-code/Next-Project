@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import StarRating from "../productDetail/StarRating";
-import Image from "next/image";
 
 export default function ProductDisplay({ category, title }) {
   const [products, setProducts] = useState([]);
@@ -61,7 +60,7 @@ export default function ProductDisplay({ category, title }) {
               <Link href={`/details/${product.id}`}>
                 <div className="bg-gray-300 shadow rounded-lg p-4 text-center cursor-pointer hover:shadow-lg">
                   <img
-                    src={product.images}
+                    src={product.thumbnail}
                     alt={product.title}
                     className="w-full h-40 object-cover rounded"
                   />
@@ -84,7 +83,7 @@ export default function ProductDisplay({ category, title }) {
       <div className="hidden md:grid px-8 grid-cols-2 lg:grid-cols-4 gap-4">
         {products.map((product) => (
           <Link key={product.id} href={`/details/${product.id}`}>
-            <div className="bg-gray-200 shadow rounded-lg p-4 text-center cursor-pointer hover:shadow-lg">
+            <div className="bg-gray-200 shadow rounded-lg p-4  cursor-pointer hover:shadow-lg">
               <img
                 src={product.thumbnail}
                 alt={product.title}
@@ -92,6 +91,7 @@ export default function ProductDisplay({ category, title }) {
               />
               <h3 className="mt-2 font-medium">{product.title}</h3>
               <p className="text-gray-500 text-sm">${product.price}</p>
+              <StarRating rating={product.rating} />
             </div>
           </Link>
         ))}

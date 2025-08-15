@@ -23,7 +23,7 @@ const defineColors = [
 
 export default function SideBar() {
   const [openItem, setOpenItem] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState("beauty");
+  const [selectedCategory, setSelectedCategory] = useState("Mens-Shirts");
 
   const handleToggleItem = (cat) => {
     setSelectedCategory(cat.toLowerCase());
@@ -48,28 +48,31 @@ export default function SideBar() {
             {/* Categories Section */}
             <section>
               <h2 className="font-medium mb-2">Categories</h2>
-              {["Groceries", "smartphones", "beauty", "fragrances"].map(
-                (cat) => (
-                  <div key={cat}>
-                    <button
-                      className={`flex justify-between items-center w-full py-2 text-left px-2 rounded 
+              {[
+                "Mens-Shirts",
+                "Mens-Watches",
+                "Womens-Dresses",
+                "fragrances",
+              ].map((cat) => (
+                <div key={cat}>
+                  <button
+                    className={`flex justify-between items-center w-full py-2 text-left px-2 rounded 
                       ${
                         selectedCategory === cat
                           ? "bg-gray-200 font-semibold"
                           : "hover:bg-gray-100"
                       }`}
-                      onClick={() => handleToggleItem(cat)}
-                    >
-                      <span className="capitalize">{cat}</span>
-                      {openItem === cat ? (
-                        <MdOutlineKeyboardArrowUp size={20} />
-                      ) : (
-                        <MdOutlineKeyboardArrowRight size={20} />
-                      )}
-                    </button>
-                  </div>
-                )
-              )}
+                    onClick={() => handleToggleItem(cat)}
+                  >
+                    <span className="capitalize">{cat}</span>
+                    {openItem === cat ? (
+                      <MdOutlineKeyboardArrowUp size={20} />
+                    ) : (
+                      <MdOutlineKeyboardArrowRight size={20} />
+                    )}
+                  </button>
+                </div>
+              ))}
             </section>
 
             {/* Price Range */}

@@ -10,7 +10,7 @@ function BrowseByStyle() {
             BROWSE BY dress STYLE
           </h1>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[repeat(5,1fr)] auto-rows-fr gap-0 w-full h-full">
+          <div className="grid grid-cols-1 lg:grid-cols-[repeat(5,1fr)] auto-rows-fr gap-2 w-full h-full">
             {/* First Cell */}
             <div className="relative bg-white lg:col-start-1 lg:col-end-3 ">
               <Image
@@ -21,7 +21,7 @@ function BrowseByStyle() {
                 className="object-cover rounded-2xl w-full h-auto"
                 priority
               />
-              <div className="absolute inset-0 flex justify-start items-start p-4 bg-black/30">
+              <div className="absolute inset-0 flex justify-start items-start p-4">
                 <p className="text-black text-[24px] lg:text-[36px] font-bold">
                   Casual
                 </p>
@@ -38,7 +38,7 @@ function BrowseByStyle() {
                 className="object-cover rounded-2xl w-full h-auto "
                 priority
               />
-              <div className="absolute  inset-0 flex justify-start items-start p-4 bg-black/30">
+              <div className="absolute  inset-0 flex justify-start items-start p-4">
                 <p className="text-black text-[24px] font-bold lg:text-[36px] ">
                   Formal
                 </p>
@@ -55,7 +55,7 @@ function BrowseByStyle() {
                 className="object-cover rounded-2xl"
                 priority
               />
-              <div className="absolute inset-0 flex justify-start items-start p-4 bg-black/30">
+              <div className="absolute inset-0 flex justify-start items-start p-">
                 <p className="text-black text-[24px] font-bold lg:text-[36px]">
                   Party
                 </p>
@@ -72,7 +72,7 @@ function BrowseByStyle() {
                 className="object-cover rounded-2xl"
                 priority
               />
-              <div className="absolute inset-0 flex justify-start items-start p-4 bg-black/30">
+              <div className="absolute inset-0 flex justify-start items-start p-4 ">
                 <p className="text-black text-[24px] lg:text-[36px] font-bold">
                   Gym
                 </p>

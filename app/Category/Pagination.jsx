@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { GoFilter } from "react-icons/go";
-
+import Link from "next/link";
+import StarRating from "../productDetail/StarRating";
 const PaginationApi = ({ category, title }) => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -40,9 +41,9 @@ const PaginationApi = ({ category, title }) => {
           <h1 className="m-4 text-4xl">{title}</h1>
           <p className="flex gap-2">
             Total Products{" "}
-            <span>
+            <Link href="/Category/SideBar.jsx">
               <GoFilter size={24} />
-            </span>
+            </Link>
           </p>
         </div>
 
@@ -59,6 +60,7 @@ const PaginationApi = ({ category, title }) => {
               />
               <h3 className="mt-2">{item.title}</h3>
               <p>${item.price}</p>
+              <StarRating rating={item.rating} />
             </div>
           ))}
         </div>

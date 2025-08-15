@@ -11,8 +11,8 @@ function HomePage() {
     <>
       <HeroSection />
       <Brands />
-      <ProductDisplay title={"New Arrivals"} category={"laptops"} />
-      <ProductDisplay title={"Top Selling"} category={"smartphones"} />
+      <ProductDisplay title={"New Arrivals"} category={"mens-shirts"} />
+      <ProductDisplay title={"Top Selling"} category={"mens-watches"} />
       <BrowseByStyle />
       <ReviewSlider />
     </>
