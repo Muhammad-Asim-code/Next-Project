@@ -9,6 +9,7 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import {
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
+  MdVerified,
 } from "react-icons/md";
 
 export default function ReviewSlider() {
@@ -65,10 +66,11 @@ export default function ReviewSlider() {
             key={idx}
             className="p-4 bg-gray-200 shadow rounded flex px-2 flex-col items-center "
           >
-            <div>
-              <StarRating rating={review.rating} />
+            <div className="flex items-center gap-2">
+              <h3 className="font-bold text-lg">{review.author}</h3>
+              <MdVerified fill="green" size={20} />
             </div>
-            <h3 className="font-bold text-lg">{review.author}</h3>
+            <StarRating rating={review.rating} />
             <p className="text-gray-600 text-sm mt-2">{review.comment}</p>
           </div>
         ))}

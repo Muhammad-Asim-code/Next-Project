@@ -46,16 +46,28 @@ export default function Footer() {
               wear. From women to men.
             </p>
             <div className="flex gap-3 mt-4">
-              <a href="#">
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer">
                 <FaTwitter className="bg-white hover:bg-black hover:text-white text-black p-2 rounded-full w-8 h-8" />
               </a>
-              <a href="#">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebookF className="bg-white hover:bg-black hover:text-white text-black p-2 rounded-full w-8 h-8" />
               </a>
-              <a href="#">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram className="bg-white hover:bg-black hover:text-white text-black p-2 rounded-full w-8 h-8" />
               </a>
-              <a href="#">
+              <a
+                href="https://www.pinterest.com/azaka064"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaPinterestP className="bg-white hover:bg-black hover:text-white text-black p-2 rounded-full w-8 h-8" />
               </a>
             </div>

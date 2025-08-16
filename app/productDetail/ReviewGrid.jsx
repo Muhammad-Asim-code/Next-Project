@@ -3,6 +3,7 @@ import React from "react";
 import useReviews from "./ReviewHook";
 import StarRating from "./StarRating";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { MdVerified } from "react-icons/md";
 
 export default function ReviewGrid() {
   const { reviews, loading, hasMore, loadMore } = useReviews(8);
@@ -25,7 +26,10 @@ export default function ReviewGrid() {
           >
             <div className="flex items-center gap-4">
               <div>
-                <h3 className="font-bold text-lg">{review.author}</h3>
+                <div className="flex items-center gap-2">
+                  <h3 className="font-bold text-lg">{review.author}</h3>
+                  <MdVerified fill="green" size={20} />
+                </div>
                 <StarRating rating={review.rating} />
               </div>
             </div>

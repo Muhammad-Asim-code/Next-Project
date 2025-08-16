@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { RxCross2 } from "react-icons/rx";
+import Link from "next/link";
 
 function Banner() {
   const [hidden, setHidden] = useState(false);
@@ -22,12 +23,15 @@ function Banner() {
     return (
       <div className="bg-black text-white p-4">
         <div className="flex justify-center text-center">
-          <p className="text-sm font-normal">
+          <div className="text-sm font-normal">
             Sign up and get 20% off to your first order.{" "}
-            <span className="font-medium underline underline-offset-2">
-              <a href="">Sign Up Now</a>
-            </span>
-          </p>
+            <Link
+              href="/Login"
+              className="font-medium underline underline-offset-2"
+            >
+              Sign Up Now
+            </Link>
+          </div>
         </div>
       </div>
     );
@@ -38,12 +42,15 @@ function Banner() {
 
   return (
     <div className="bg-black text-white flex items-center justify-center relative">
-      <p className="text-sm font-normal text-center">
+      <div className="text-sm font-normal text-center">
         Sign up and get 20% off to your first order.{" "}
-        <span className="font-medium underline underline-offset-2">
-          <a href="">Sign Up Now</a>
-        </span>
-      </p>
+        <Link
+          href="/Login"
+          className="font-medium underline underline-offset-2"
+        >
+          Sign Up Now
+        </Link>
+      </div>
       <button
         onClick={() => setHidden(true)}
         className="absolute right-4 text-xl text-white hidden sm:block"
