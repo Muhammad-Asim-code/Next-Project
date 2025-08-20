@@ -13,8 +13,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#F0F0F0] text-black mt-40">
       {/* Newsletter Section */}
-      <div className="bg-black text-white rounded-xl mx-auto max-w-6xl p-8 flex flex-col lg:flex-row items-center justify-between gap-4 -translate-y-1/2">
-        <h2 className="text-2xl lg:text-[40PX] font-bold text-center lg:text-left">
+      <div className="bg-black text-white rounded-xl mx-auto max-w-7xl p-10 flex flex-col lg:flex-row items-center justify-between gap-4 -translate-y-1/2">
+        <h2 className="text-2xl lg:text-[40PX] font-bold text-center font-integral lg:text-left">
           STAY UPTO DATE ABOUT <br className="hidden lg:block" /> OUR LATEST
           OFFERS
         </h2>
@@ -29,7 +29,7 @@ export default function Footer() {
               className="flex-1 outline-none text-black bg-transparent"
             />
           </div>
-          <button className="bg-white text-black font-medium rounded-full py-2 hover:bg-gray-200 transition">
+          <button className="bg-white text-black font-satoshi font-medium rounded-full py-2 hover:bg-gray-200 transition">
             Subscribe to Newsletter
           </button>
         </div>
@@ -40,8 +40,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Brand Info */}
           <div>
-            <h3 className="font-bold text-lg">SHOP.CO</h3>
-            <p className="text-sm text-gray-600 mt-2">
+            <h3 className="font-bold font-integral text-3xl">SHOP.CO</h3>
+            <p className="text-sm text-black/60 font-satoshi leading-5 mt-2">
               We have clothes that suits your style and which you’re proud to
               wear. From women to men.
             </p>
@@ -76,8 +76,10 @@ export default function Footer() {
           {/* Company */}
           <div className="grid grid-cols-2 md:grid-cols-4 col-span-1 md:col-span-4 gap-8">
             <div>
-              <h4 className="font-bold mb-3">COMPANY</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h4 className="font-medium font-satoshi tracking-[3px]  leading-4 mb-3">
+                COMPANY
+              </h4>
+              <ul className="space-y-2 text-sm font-satoshi text-black/60">
                 <li>
                   <a href="#">About</a>
                 </li>
@@ -95,8 +97,10 @@ export default function Footer() {
 
             {/* Help */}
             <div>
-              <h4 className="font-bold mb-3">HELP</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h4 className="font-medium font-satoshi tracking-[3px] leading-4 mb-3">
+                HELP
+              </h4>
+              <ul className="space-y-2 text-smfont-satoshi text-black/60">
                 <li>
                   <a href="#">Customer Support</a>
                 </li>
@@ -114,8 +118,10 @@ export default function Footer() {
 
             {/* FAQ */}
             <div>
-              <h4 className="font-bold mb-3">FAQ</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h4 className="font-medium font-satoshi tracking-[3px]  leading-4 mb-3">
+                FAQ
+              </h4>
+              <ul className="space-y-2 text-smfont-satoshi text-black/60">
                 <li>
                   <a href="#">Account</a>
                 </li>
@@ -133,8 +139,10 @@ export default function Footer() {
 
             {/* Resources */}
             <div>
-              <h4 className="font-bold mb-3">RESOURCES</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h4 className="font-medium font-satoshi tracking-[3px]  leading-4 mb-3">
+                RESOURCES
+              </h4>
+              <ul className="space-y-2 text-sm font-satoshi text-black/60">
                 <li>
                   <a href="#">Free eBooks</a>
                 </li>
@@ -155,7 +163,7 @@ export default function Footer() {
 
       {/* Bottom Footer */}
       <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center border-t border-gray-300">
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-black/60 font-satoshi">
           Shop.co © 2000-2023, All Rights Reserved
         </p>
         <div className="flex gap-3 mt-2 md:mt-0">

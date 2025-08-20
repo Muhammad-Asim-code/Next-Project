@@ -15,5 +15,13 @@ export default function StarRating({ rating }) {
     }
   }
 
-  return <div className="flex gap-1">{stars}</div>;
+  return (
+    <div className="flex items-center gap-2">
+      {/* Star icons */}
+      <div className="flex gap-1">{stars}</div>
+
+      {/* Numeric rating text */}
+      <span className="text-gray-600 text-sm">({rating}/5)</span>
+    </div>
+  );
 }

@@ -4,9 +4,9 @@ import Image from "next/image";
 function BrowseByStyle() {
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-10">
         <div className="bg-[#F0F0F0] w-full max-w-[1240px] h-fit rounded-2xl p-10 flex flex-col items-center ">
-          <h1 className="font-bold text-[32px] lg:text-[48px] text-center mb-6">
+          <h1 className="font-bold font-integral text-[32px] lg:text-[48px] text-center mb-6">
             BROWSE BY dress STYLE
           </h1>
 

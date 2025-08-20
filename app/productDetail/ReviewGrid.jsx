@@ -4,6 +4,7 @@ import useReviews from "./ReviewHook";
 import StarRating from "./StarRating";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { MdVerified } from "react-icons/md";
+import Image from "next/image";
 
 export default function ReviewGrid() {
   const { reviews, loading, hasMore, loadMore } = useReviews(8);
@@ -18,11 +19,40 @@ export default function ReviewGrid() {
 
   return (
     <div className="py-4 px-2 md:px-32">
+      <div className="flex justify-between gap-4 items-center">
+        <h2 className="m-10 font-bold font-satoshi text-2xl">All Reviews </h2>
+        <div className=" flex gap-3 items-center">
+          <div className="p-2 bg-gray-200 rounded-full">
+            <Image
+              src="/image/filtervector.svg"
+              width={21}
+              height={18}
+              className="inline-block"
+              alt="Filter vector "
+            />
+          </div>
+          <div className="flex items-center gap-3 py-4 px-5 w-28 bg-gray-200 rounded-full">
+            <p className=" font-satoshi font-medium">Latest</p>
+            <Image
+              src="/image/ArrowDown.svg"
+              height={14}
+              width={14}
+              className="inline-block "
+            />
+          </div>
+
+          <div>
+            <button className=" font-satoshi font-medium px-5 py-4 bg-black text-white rounded-full">
+              Write a Review
+            </button>
+          </div>
+        </div>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {reviews.map((review, idx) => (
           <div
             key={idx}
-            className="p-4 bg-gray-200 shadow rounded flex flex-col"
+            className="p-4 border border-black/50 shadow rounded flex flex-col"
           >
             <div className="flex items-center gap-4">
               <div>

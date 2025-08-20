@@ -49,23 +49,23 @@ const PaginationApi = ({ category, title }) => {
 
         {loading && <p>Loading...</p>}
 
-        {/* Products Grid */}
         <div className="grid grid-cols-1 items-center md:grid-cols-3 gap-4">
           {product.map((item) => (
             <div key={item.id} className="border rounded p-4">
-              <img
-                src={item.thumbnail}
-                alt={item.title}
-                className="w-full h-48 object-cover"
-              />
-              <h3 className="mt-2">{item.title}</h3>
-              <p>${item.price}</p>
-              <StarRating rating={item.rating} />
+              <Link href={`/details/${item.id}`}>
+                <img
+                  src={item.thumbnail}
+                  alt={item.title}
+                  className="w-full h-48 object-cover"
+                />
+                <h3 className="mt-2">{item.title}</h3>
+                <p>${item.price}</p>
+                <StarRating rating={item.rating} />
+              </Link>
             </div>
           ))}
         </div>
 
-        {/* Pagination */}
         <div className="flex justify-center gap-2 mt-6">
           <button
             onClick={() => changePage(page - 1)}

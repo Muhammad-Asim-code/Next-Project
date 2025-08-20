@@ -36,16 +36,13 @@ export default function SideBar() {
   return (
     <section>
       <div className="flex flex-col md:flex-row min-h-screen">
-        {/* Sidebar */}
         <aside className="w-[300px] hidden md:block bg-gray-50 p-4 border-r border-gray-200">
           <div className="sticky top-0">
-            {/* Header */}
             <div className="flex items-center justify-between mb-4">
               <h1 className="text-lg font-semibold">Filters</h1>
               <GoFilter size={24} />
             </div>
 
-            {/* Categories Section */}
             <section>
               <h2 className="font-medium mb-2">Categories</h2>
               {[
@@ -75,13 +72,11 @@ export default function SideBar() {
               ))}
             </section>
 
-            {/* Price Range */}
             <section className="mt-4">
               <h2 className="font-medium mb-2">Price</h2>
               <input type="range" min={0} max={100} className="w-full" />
             </section>
 
-            {/* Colors */}
             <section className="mt-4">
               <h2 className="font-medium mb-2 flex justify-between items-center">
                 Colors
@@ -94,7 +89,6 @@ export default function SideBar() {
               />
             </section>
 
-            {/* Sizes */}
             <section className="mt-4">
               <h2 className="font-medium mb-2">Size</h2>
               <div className="flex gap-2 flex-wrap">
@@ -120,7 +114,6 @@ export default function SideBar() {
               </div>
             </section>
 
-            {/* Dress Style */}
             <section className="mt-4">
               <h2 className="font-medium mb-2">Dress Style</h2>
               {["Casual", "Formal", "Sport", "Party"].map((style) => (
@@ -147,7 +140,6 @@ export default function SideBar() {
               ))}
             </section>
 
-            {/* Apply Filter */}
             <div className="mt-6">
               <button className="w-full bg-black text-white py-2 rounded-2xl hover:bg-gray-800">
                 Apply Filter
@@ -156,7 +148,6 @@ export default function SideBar() {
           </div>
         </aside>
 
-        {/* Main Content */}
         <main className="flex-1 p-4">
           <PaginationApi title={selectedCategory} category={selectedCategory} />
         </main>

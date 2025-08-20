@@ -3,7 +3,7 @@ function Brands() {
   return (
     <>
       <div className=" bg-black py-6">
-        <div className="max-w-6xl mx-auto flex justify-around items-center gap-8 flex-wrap">
+        <div className="max-w-7xl mx-auto flex justify-between items-center gap-8 flex-wrap">
           <Image
             src="/image/versache.png"
             width={150}

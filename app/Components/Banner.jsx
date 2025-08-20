@@ -41,19 +41,16 @@ function Banner() {
   if (hidden) return null;
 
   return (
-    <div className="bg-black text-white flex items-center justify-center relative">
-      <div className="text-sm font-normal text-center">
+    <div className="bg-black h-[38px] text-white flex items-center justify-center relative">
+      <div className="text-sm font-satoshi font-normal text-center">
         Sign up and get 20% off to your first order.{" "}
-        <Link
-          href="/Login"
-          className="font-medium underline underline-offset-2"
-        >
+        <Link href="/Login" className="font-medium underline">
           Sign Up Now
         </Link>
       </div>
       <button
         onClick={() => setHidden(true)}
-        className="absolute right-4 text-xl text-white hidden sm:block"
+        className="absolute right-48 text-xl text-white hidden sm:block"
       >
         <RxCross2 />
       </button>

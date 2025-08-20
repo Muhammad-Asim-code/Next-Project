@@ -17,9 +17,12 @@ export default function CartItem({ item, onRemove }) {
       />
       <div className="flex-1">
         <h2 className="font-semibold">{item.title}</h2>
-        <StarRating rating={item.rating} />
+        <div className="md:flex items-center gap-10">
+          <StarRating rating={item.rating} />
+          <p>{item.returnPolicy}</p>
+        </div>
         <p className="text-gray-600">
-          ${item.price} × {item.quantity}
+          ${item.price} &#120; {item.quantity}
         </p>
 
         <div className="flex items-center gap-2 mt-2 w-fit rounded-4xl bg-gray-300">
@@ -41,10 +44,7 @@ export default function CartItem({ item, onRemove }) {
           = ${(item.price * item.quantity).toFixed(2)}
         </p>
       </div>
-      <button
-        onClick={onRemove}
-        className=" cursor-pointer px-3 py-2 cursor-pointer"
-      >
+      <button onClick={onRemove} className=" cursor-pointer px-3 py-2">
         <MdDelete fill="red" size={30} />
       </button>
     </div>

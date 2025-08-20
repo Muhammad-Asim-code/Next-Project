@@ -1,7 +1,7 @@
 "use client";
 import ProductDisplay from "../Components/Card";
 import ItemDetail from "../productDetail/Detail";
-import ReviewGrid from "../productDetail/ReviewGrid";
+import ProductTabs from "../productDetail/revDetails";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../ReduxStore/cartSlice";
@@ -28,7 +28,7 @@ export default function Details({ id }) {
         product={product}
         addToCart={() => dispatch(addToCart(product))}
       />
-      <ReviewGrid />
+      <ProductTabs product={product} />
       <ProductDisplay title="You Might Also Like" category="womens-dresses" />
     </>
   );

@@ -54,7 +54,6 @@ export default function CartPage() {
         ))}
       </div>
 
-      {/* Totals */}
       <div className="flex justify-center ">
         <div className="mt-6 flex flex-col gap-6 justify-between items-center font-bold text-xl w-fit">
           <div className="w-full p-2">
@@ -73,7 +72,6 @@ export default function CartPage() {
           </div>
           <hr />
 
-          {/* Promo Code */}
           <div className="flex ">
             <input
               className="border p-2 rounded-2xl m-1"
@@ -85,7 +83,6 @@ export default function CartPage() {
             </button>
           </div>
 
-          {/* Payment Methods */}
           <div className="w-full mt-6">
             <h2 className="text-lg mb-2">Choose Payment Method</h2>
             <div className="flex flex-wrap gap-3">
@@ -102,14 +99,13 @@ export default function CartPage() {
               )}
             </div>
           </div>
-          {/* Checkout */}
+
           <button className="flex items-center justify-center gap-10 cursor-pointer active:cursor-progress bg-black py-1 rounded-2xl w-full text-white">
             Go to CheckOut <FaArrowRight fill="white" size={30} />
           </button>
         </div>
       </div>
 
-      {/* Popup Modal */}
       {selectedMethod && (
         <div className="fixed inset-0 bg-black/60 z-50 flex justify-center items-center">
           <div className="bg-white p-6 rounded-xl shadow-lg w-[350px]">
